@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Função</title>
+    <script>
+
+        // existem dois tipos de funções
+        // funções void: realizam algum processamento, mas não fornece retorno.
+        // funções return: realizam algum processamento, mas fornecem retorno.
+        function soma (a, b){
+            // se for igual a undefined, recebe 0, se não for, recebe o parametro b.
+            b = b === undefined ? 0 : b;
+            let soma = a + b;
+
+            return soma;
+        }
+
+        console.log(soma(10, 10));
+        // o JS tem a inteligência de ignorar os parametros que não estão previstos.
+        console.log(soma(10, 20, 30));
+        // se passamos um parametro a menos. o parametro que n foi passado será undefined.
+        // porém dá pra tratar esse erro com operadaor ternário
+        console.log(soma(1));
+        // se passarmos uma função com os parametros vazios. retornara undefined para ambos os param vazios.
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

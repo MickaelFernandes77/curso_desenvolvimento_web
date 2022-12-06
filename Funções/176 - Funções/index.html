@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Função</title>
+    <script>
+
+        // existem dois tipos de funções
+        // funções void: realizam algum processamento, mas não fornece retorno.
+        // funções return: realizam algum processamento, mas fornecem retorno.
+        function calcularAreaTerreno(Largura, Comprimento){
+            let area = Largura * Comprimento
+
+            return area;
+            // document.write(`O retorno da área é: ${area}`);
+        }
+
+        // chamada da função
+        let largura = parseInt(prompt('Digite a largura do terreno'));
+        let comprimento = parseInt(prompt('Digite a comprimento do terreno'));
+        let areaResult = calcularAreaTerreno(largura, comprimento) 
+        
+        document.write(areaResult);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

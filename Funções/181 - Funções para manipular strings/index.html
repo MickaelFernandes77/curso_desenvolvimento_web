@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Funções - Funções Nativas para Manipular Strings</title>
+    <script>
+
+        let nome = 'Mickael Fernandes';
+        let nome2 = '     Mickael Fernandes   ';
+
+        // propriedade length: retorna o tamanho de uma string. Inicia sempre do valor 0, e também conta os espaços em branco.
+        // pode ser usados em arrays e objetos
+        console.log('Tamanho da String' + nome.length);
+
+        // retorna a string, de uma posição que passamos.
+        console.log('Uso do CharAt: ' + nome.charAt(8));
+
+        // indexOf: retorna a posição da primeira ocorrência, de um caracter na cadeia de string.
+        // ele faz a diferenciação de caracter maiusculos e minusculos.
+        console.log('uso do index of: ' + nome.indexOf('M'));
+
+        // substr: recorta uma parte da string, e a partir dessa posição recortada, temos a sequencia posterior da cadeia de caracteres;
+        console.log('uso do substring: ' + nome.substr(0, 7))
+
+        // toLowerCase: converte a cadeia de string pra minusculos
+        console.log(nome.toLocaleLowerCase());
+        // toUpperCase: converte a cadeia de string pra maiusculos
+        console.log(nome.toUpperCase());
+        // trim: remove os espaços em branco nas extremidades de uma string(inicio e final)
+        console.log('uso do trim: ' + nome2.trim());
+
+
+        // replace: substitui uma cadeia de caracteres, por outra.
+        nome = nome.replace('Fernandes', 'Bispo de Souza');
+        console.log(nome);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

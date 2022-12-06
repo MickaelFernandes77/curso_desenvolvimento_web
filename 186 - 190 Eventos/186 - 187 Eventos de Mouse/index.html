@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Eventos de Mouse</title>
+    <script>
+
+        // Eventos: os eventos nos possibilitam capturar ações que são feitas pelos usuários dentro das páginas.
+        
+        // eventos de mouse
+        // onclick: aciona ao click do mouse
+        // ondblclick: acionada no duplo clique do mouse
+        // onmouseup: é acionado quando o click sobre um determinado elemento foi liberado(soltado).
+        // onmouseover: quando o mouse está em cima do elemento
+        // onmouseout: quando o mouse está fora do elemento
+
+        function oneClick(){
+            alert('Clicou');
+        }
+
+        function dblClick(){
+            alert('Clicou duas vezes');
+        }
+
+        function mouseOver(){
+            alert('mouse sobre o elemento');
+        }
+
+        function mouseOut(){
+            alert('mouse fora do elemento');
+        }
+
+        function mouseUp(){
+            alert('Soltou o click');
+        }
+        
+    </script>
+</head>
+
+<body>
+    <div style="background: blue; height: 200px; width: 250px;" onclick="oneClick();" onmouseover="mouseOver()" onmouseout="mouseOut()" onmouseup="mouseUp()">
+
+    </div>
+</body>
+
+</html>

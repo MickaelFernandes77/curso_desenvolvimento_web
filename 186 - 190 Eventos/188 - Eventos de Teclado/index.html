@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Eventos de teclado</title>
+    <script>
+
+        // Eventos: os eventos nos possibilitam capturar ações que são feitas pelos usuários dentro das páginas.
+        
+        // evento de teclado
+        // onkeydown: acionado quando uma tecla é pressionada
+        // onkeypress: acionado quando uma tecla é pressionada(mas só funciona com caracteres)
+        // onkeyup: acionada quando a tecla é segurada um pouco e soltada
+
+        function acao1(){
+            alert('tecla pressionada, onkey down');
+        }
+
+        function acao2(){
+            alert('tecla soltada, onkeyup')
+        }
+
+        
+        function acao3(){
+            alert('tecla pressionada, onkeypress')
+        }
+        
+    </script>
+</head>
+
+<body>
+    <input type="text" onkeypress="acao3()">
+</body>
+
+</html>

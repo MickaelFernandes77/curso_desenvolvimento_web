@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Funções - Escopo de Variáveis</title>
+    <script>
+
+    // escopo global: escopo do script como um todo. As vars do escopo de bloco, podem ser acessadas em todos os escopos.
+    // escopo da função: escopo da parte de dentro de uma função. As vars de função, só podem ser acessadas na função.
+    // escopo de bloco: escopo da parte de dentro de uma condicional como if ou switch, por exemplo. Temos acesso no escopo global as vars de escopo de bloco, quando o escopo de bloco está no escopo global. Se o escopo de bloco estiver em uma função, a variavel sofrerá elevação para o escopo da função.
+    
+    // var de escopo global
+    let serie = 'The Walking Dead';
+    document.write(serie + '<br>');
+
+    if(true){
+        var serie2 = 'Supernatural';
+        document.write(serie2 + '<br>');
+    }
+
+    // acessando a var do escopo de bloco, no escopo global.
+    document.write(serie2 + '<br>');
+
+    function series(){
+        
+        document.write('<br>' + '<br>' + serie + '<br>')
+        document.write(serie2 + '<br>');
+    }
+
+    series();
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
