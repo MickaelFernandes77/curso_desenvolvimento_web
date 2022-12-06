@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções Factory</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        //função factory: servem para criações de objetos de forma dinamica, em tempo de execução. é um conceito que pode ou não ser aplicado, dependendo da situação do projeto.
+
+        let Bicicleta1 = {
+            cor: 'Branca',
+            marcha: 'unica',
+            aro: 12,
+            pedalar(){
+                console.log('Método Pedalar executado');
+            }
+        }
+
+        let Bicicleta2 = {
+            cor: 'Vermelha',
+            marcha: '18',
+            aro: 26,
+            pedalar(){
+                console.log('Método Pedalar executado');
+            }
+        }
+
+        //para criar objetos de forma dinamica
+        let BicicletaFactory = function(cor, marcha, aro){
+            return {
+                cor: cor,
+                marcha: marcha,
+                aro: aro,
+                pedalar(){console.log('Método Pedalar executado');}
+            }
+        }
+
+        let Bicicleta3 = BicicletaFactory('Azul', '18', 26);
+        let Bicicleta4 = BicicletaFactory('Preta', '21', 29);
+
+        console.log(Bicicleta1);
+        console.log(Bicicleta2);
+        console.log(Bicicleta3);
+        console.log(Bicicleta4);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

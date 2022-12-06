@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>270. Destructuring Assignment parte 3 - Funções</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        // destructring: desestruturação. Podemos desestruturar arrays, objetos, e funções.
+
+        let arr = [10, 20, 30, 40];
+
+        //uso da desestruturação de array, numa função
+        // e, recebe valor default
+        function teste([a, b, c, d, e = 50]){
+            console.log(a, b, c, d, e);
+        }
+
+        teste(arr)
+        //uso da desestruturação de objetos, numa função
+        // e, recebe valor default
+        let obj = {a: 10, b:20, c:30, d: 40};
+
+        function teste2({a, b, c, d, e = 55}){
+            console.log(a, b, c, d);
+        }
+
+        teste2(obj);
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

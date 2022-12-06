@@ -1,0 +1,4 @@
+Prototype
+
+Prototype, é um modelo/padrão um primeiro tipo ou primeiro exemplar de alguma coisa.
+Sempre que criamos algum objeto dentro do JS ele automaticamente se torna um descendente.

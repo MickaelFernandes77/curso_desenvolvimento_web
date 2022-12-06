@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let var em ES6</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        // Observação: Uma variável var quando é executada em bloco, ela sofre uma elevação para escopo global
+        // Agora se a var for declarada em um escopo de bloco em uma função, ela sofre elevação, para o escopo superior, no caso o da função, ou seja não é possível acessar ela por escopo global.
+
+        // Var: sofre eleveção, quando for passada em um escopo de bloco
+        // Let: Mantem o escopo declarado, não fazendo elevaçao a outro escopo.
+        
+
+        // // e aqui global, está disponível para tudo
+        let serie = 'The Walking Dead';
+
+        {
+        let serie = 'Supernatural';
+            // e também no escopo de bloco
+            if(true){
+                console.log('dentro do bloco: ' + serie);
+            }
+        }
+
+        console.log('fora do bloco: ' + serie);
+        //  no exemplo por a var não sofre elevação, por isso é imprimido as duas vars cada uma com seu respectivo bloco
+     </script>
+    </head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

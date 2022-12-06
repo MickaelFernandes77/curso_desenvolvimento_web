@@ -1,0 +1,9 @@
+Como funciona o relacionamento entre tabelas?
+
+Chave Primária(Primary Key) - toda tabela deve ter uma chave primária
+Chave Estrangeira(Foreign Key) - e a chave estrangeira é a a ligação de uma chave primária de uma tabela em uma outra tabela, como referência.
+
+Tipos de relacionamentos:
+Um para Um (1:1)
+Um Para Muitos(1:n)
+Muitos Para Muitos(n:n | n:m)

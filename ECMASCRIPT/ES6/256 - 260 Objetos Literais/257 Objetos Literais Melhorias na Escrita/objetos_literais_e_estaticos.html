@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos Literais Melhorias de Notação</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        let nome = 'Mickael';
+        let idade = 20;
+        let sexo = 'Masculino';
+        let profissao = 'Programador';
+
+        let objeto = {
+            nome: nome,
+            idade: idade,
+            sexo: sexo,
+            profissao: profissao,
+            exibirResumo: function(){
+                console.log(`Nome: ${this.nome}, Idade: ${this.idade} anos, Sexo: ${this.sexo}, Profissão: ${this.profissao},`)
+            }
+        }
+
+        let objeto2 = {
+            nome, //nessa forma de escrita funciona: nome = nome, idade = idade, sexo = sexo
+            idade,
+            sexo,
+            profissao,
+            exibirResumo: function(){
+                console.log(`Nome: ${this.nome}, Idade: ${this.idade} anos, Sexo: ${this.sexo}, Profissão: ${this.profissao},`)
+            }
+        }
+        
+        console.log(objeto);
+        objeto.exibirResumo();
+    </script>
+    </head>
+<body>
+</body>
+</html>

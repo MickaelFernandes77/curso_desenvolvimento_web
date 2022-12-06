@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Herança</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+    
+    //  todos os objetos, são filhos de object.prototype
+    let animal = {
+        attr1: 'a'
+    } 
+    //uso para referenciar o prototype de um outro objeto, para ter a herança de um objeto para outro. de animal para vertebrado
+    let vertebrado = {
+        __proto__: animal, attr2: 'b'
+    } 
+
+    //uso para referenciar o prototype de um outro objeto, para ter a herança de um objeto para outro. de vertebrado para ave
+    let ave = {
+       __proto__: vertebrado,  attr3: 'c'
+    }
+
+    // criação de um atributo, que será herdado para todos os objetos presentes na aplicação
+    Object.prototype.attr50 = 'Z';
+
+    console.log(ave.attr1, ave.attr2, ave.attr3, ave.attr50);
+
+    // se eventualmente eu sobrpor o valor de um atributo por herança, o JS ira ler o valor sobreposto, em vez de ler o valor original.
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

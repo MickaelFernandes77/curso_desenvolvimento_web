@@ -1,0 +1,26 @@
+/* seletor universal */
+*{color: red;}
+
+/* seletores de texto */
+h2{color: green;}
+p{color:blue;}
+
+/* seletor de id */
+#header{background-color: yellow;}
+
+/* seletor de classe */
+.verde{color: green;}
+
+/* seletores de elemento */
+ul{display: flex; justify-content: space-around;}
+
+/* seletor de filho */
+ul > li{text-decoration: none; list-style: none;}
+
+/* seletor descendente: seleciona um determinado elemento, mesmo se existir outros elementos aninhados entre eles. No exemplo estamos selecionando o a que está na ul */
+ul a{color: black;}
+
+/* seletor adjacente: seleciona o elemento posterior mais próximo. No exemplo estamos selecionando o p, que está mais proximo do h4 */
+h4+p{color: orange;}
+/* seletor de irmão em geral: seleciona o elemento todos os elementos mais próximos. No exemplo estamos selecionando todos os p's, que estão mais proximos do h5 */
+h5~p{color: gray;}

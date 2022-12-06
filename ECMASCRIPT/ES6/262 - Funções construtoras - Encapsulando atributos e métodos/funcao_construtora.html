@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Funções construtoras - Encapsulando atributos e métodos</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+
+        // NESSE EXEMPLO: é possível alterar a veocidade maxima do carro, de maneira externa, e isso gera um furo de segurança na aplicação.
+    let Carro = function (){
+        this.cor = 'Amarelo'
+        this.modelo = 'Chevette'
+        this.velocidadeAtual = 0
+        this.velocidadeMaxima = 180
+
+        this.acelerar = function () {
+           let velocidade = this.getVelocidadeAtual() + 50
+          //se a velocidade for maio que a velocidade maxima, ela recebe o valor de velocidade maxima 
+           if(velocidade > this.velocidadeMaxima){
+               velocidade = this.velocidadeMaxima
+           }// se não for maior, ela não recebe
+           this.setVelocidadeAtual(velocidade)
+
+        }
+        this.getVelocidadeAtual = function(){
+            return this.velocidadeAtual
+        }
+        this.setVelocidadeAtual = function (velocidadeAtual){
+            this.velocidadeAtual = velocidadeAtual
+        }
+    }
+
+    let carro = new Carro();
+
+    console.log(carro.velocidadeAtual);
+    console.log(carro.acelerar());
+    console.log(carro.getVelocidadeAtual());
+    //agora que passamos a velocidade maxima para uma variavel só será possivel alterar o valor dela no escopo da função.
+
+    let Carro2 = function (){
+        //variaveis privadas da função
+        var velocidadeMaxima = 180;
+        var quilometrosRodados = 0;
+        //atributos publicos da função.
+        this.cor = 'Amarelo'
+        this.modelo = 'Chevette'
+        this.velocidadeAtual = 0;
+
+        this.acelerar = function () {
+           let velocidade = this.getVelocidadeAtual() + 50
+          //se a velocidade for maio que a velocidade maxima, ela recebe o valor de velocidade maxima 
+           if(velocidade > velocidadeMaxima){
+               velocidade = velocidadeMaxima
+           }// se não for maior, ela não recebe
+           this.setVelocidadeAtual(velocidade);
+           // chamada da função KM rodados
+           setQuilometrosRodados(0.07);
+        }
+        this.getVelocidadeAtual = function(){
+            return this.velocidadeAtual
+        }
+        this.setVelocidadeAtual = function (velocidadeAtual){
+            this.velocidadeAtual = velocidadeAtual;
+        }
+        //função que adicione os KM rodados
+        var setQuilometrosRodados = function(q){
+            quilometrosRodados += q;
+        }
+    }
+
+    let carro2 = new Carro();
+
+    console.log(carro2.acelerar());
+    console.log(carro2.getVelocidadeAtual());
+    console.log(carro2.acelerar());
+    console.log(carro2.getVelocidadeAtual());
+    console.log('Velocidade maxima: ' + `${carro2.velocidadeMaxima}`);
+
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+</body>
+
+</html>

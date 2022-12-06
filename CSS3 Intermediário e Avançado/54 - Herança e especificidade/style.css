@@ -1,0 +1,14 @@
+/* quando aplicamos uma formatação em um elemento pai, os elementos filhos, também recebem a formatação, pela herança. Mas as bordas e os backgrounds, não são herdados pelos elementos filhos */
+body{
+    color: red;
+}
+
+/* no caso de dois seletores iguais, a ultima regra será aplicada. Porém o !important, quebra esse padrão*/
+/* p{color: red !important;}
+p{color: blue;} */
+
+/* se um seletor for mais específico, ele será aplicado, no exemplo o h2 pega a cor blue, por ser mais específico que o body */
+h2{color: blue;}
+
+/* e agora ficou ainda mais específico */
+h2.verde{color: green;}

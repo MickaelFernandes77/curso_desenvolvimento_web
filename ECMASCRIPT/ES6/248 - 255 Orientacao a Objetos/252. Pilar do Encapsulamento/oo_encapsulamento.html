@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulamento</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+    class Tv{
+        //constructor: ele faz a instância, ou seja a construção de um objeto.
+        constructor(){
+            //atributos do objeto
+
+            // o JS não tem private, e public. então por convenção é para exibir que um atributo é privado se passa o _ no inicio do nome do atributo.
+            this._relacaoCanais =  Array(2, 4, 5, 7, 10);
+            this._canalAtivo = 5;
+            this._volume = 5;
+        }
+
+        //getters e setters: são metodos utilizados para nos das a possibilidade de recuperar e setar atributos privados.
+        
+        //GET: o get é usado como uma função. e ele tem a função de retornar o valor de um atributo
+        get canalAtivo(){
+            return this._canalAtivo;
+        };
+
+        //SET: set tem a função de atualizar o valor de um atributo.
+        set canalAtivo(canal){
+            let x = this._relacaoCanais.indexOf(canal);
+            if(x === -1){
+                console.log('Canal não está na lista de canais.');
+            }else{
+                this._canalAtivo = canal;
+            }
+        }
+    }
+
+    let tv = new Tv();
+    // para puxar uma função set, o mesmo procedimento é seguido da função get, o JS busca automaticamente, mas precisamos estar passando um valor para a função, que ira alterar o atributo em questão.
+    tv.canalAtivo = 10;
+    // para puxar uma função get, não precisamos passar os (), o JS busca automaticamente, se não estamos atribuindo nenhum valor a ela.
+    console.log(tv.canalAtivo);
+    
+    </script>
+    </head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Da abstração a entidade</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+    
+    // let qtde_pernas = 4;
+    // let giratoria = false;
+    // let cor = 'azul';
+    
+    //software de marcenaria
+    //Paradigma Procedural
+    
+    // let cadeiras = Array();
+
+    // cadeiras[0] = Array();
+    // cadeiras[0]['qtde_pernas'] = 4;
+    // cadeiras[0]['giratoria'] = false;
+    // cadeiras[0]['cor'] = 'azul'; 
+
+    // cadeiras[1] = Array();
+    // cadeiras[1]['qtde_pernas'] = 1;
+    // cadeiras[1]['giratoria'] = true;
+    // cadeiras[1]['cor'] = 'vermelha'; 
+
+    // function girar_cadeira(indice){
+    //     if(cadeiras[indice]['giratoria'] === true){
+    //          document.write('girou')
+    //     }else{
+    //         document.write('cadeira não é giratória')
+    //     }
+    // }
+
+    // function adicionar_cadeira(qtde_pernas, giratoria, cor){
+    //     let cadeira = Array();
+
+    //     cadeira['qtde_pernas'] = qtde_pernas;
+    //     cadeira['giratoria'] = giratoria;
+    //     cadeira['cor'] = cor;
+        
+    //     cadeiras.push(cadeira);
+    // }
+
+    // girar_cadeira(0);
+    // adicionar_cadeira(3, false, 'verde');
+    
+    class Cadeira{
+        constructor(qtde_pernas, giratoria, cor){
+            //apesar do mesmo nome as variaveis com this fazem referência ao objeto, e as sem this fazem ref ao escopo da função.
+            this.qtde_pernas = qtde_pernas
+            this.giratoria = giratoria
+            this.cor = cor
+        }
+
+        girarCadeira(){
+            if(this.giratoria === true){
+                document.write('Girou!');
+            }else{
+                document.write('Cadeira não é giratória.');
+            }
+        }
+    }
+
+    // let cadeira = new Cadeira(4, false, 'Azul');
+    // let cadeira2 = new Cadeira(1, true, 'Azul');
+    // cadeira.girarCadeira()
+    // document.write('<br>');
+    // cadeira2.girarCadeira() + '<br>';
+    // document.write('<br>');
+
+    let cadeiras = Array();
+    cadeiras.push(new Cadeira(4, false, 'Azul'))
+    cadeiras.push(new Cadeira(1, true, 'Azul'))
+    console.log(cadeiras);
+    </script>
+    </head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos literais - Criação dinâmica de pares nome e valor</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        let pessoa = {
+                nome: 'Mickael',
+                idade: 20
+            }
+
+            // adição de par nome/valor em um objeto literal
+            pessoa.sexo = 'Masculino';
+            console.log(pessoa)
+
+            pessoa.dizerOi = () =>
+                console.log('Olá tudo bem?');
+            
+            pessoa.dizerOi();
+    </script>
+    </head>
+<body>
+</body>
+</html>

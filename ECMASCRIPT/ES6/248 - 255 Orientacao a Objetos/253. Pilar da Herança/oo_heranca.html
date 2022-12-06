@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herança</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        class Animal{
+            constructor(){
+                this.cor = '';
+                this.tamanho = null;
+            }
+
+            dormir(){
+                console.log('Dormir');
+            }
+        }
+
+        //extends: usado para extender os atributos e métodos de um objeto para outro.
+        class Cachorro extends Animal{
+            constructor(){
+                //super(): esse operador serve para conceder acesso ao métodod construtor de uma classe pai, na parte de herança. e deve ser colocado sempre antes de qualquer atributo de algum classe/objeto filho.
+                super();
+                this.orelhas = 'grandes e caídas';
+            }
+
+            correr(){
+                console.log('Correr')
+            }
+
+            rosnar(){
+                console.log('Rosnar')
+            }
+        }
+        class Passaro extends Animal{
+            constructor(){
+                super();
+                this.bico = 'curto';
+            }
+
+            voar(){
+                console.log('Voar');
+            }
+        }
+
+        //podemos tambpem extender objetos filhos como herança, incluindo tudo desse objeto filho, até mesmo heranças já realizadas.
+        class Papagaio extends Passaro{
+            constructor(){
+                super();
+                this.sabeFalar = true;
+            }
+
+            falar(){
+                // console.log('Falar');
+
+                let falar = this.sabeFalar;
+                if(falar === true){
+                    console.log('Falar');
+                    
+                }else{
+                    console.log('Esse papagaio não fala');
+                }
+            }
+        }
+
+        let cachorro = new Cachorro();
+        let passaro = new Passaro();
+        let papagaio = new Papagaio();
+
+        cachorro.dormir();
+        passaro.dormir();
+        papagaio.dormir();
+        passaro.voar();
+        papagaio.voar();
+        papagaio.falar();
+        
+    </script>
+    </head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

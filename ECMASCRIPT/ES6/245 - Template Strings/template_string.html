@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Strings ES6</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        let nome = 'Mickael';
+        // console.log('Olá, meu nome é: ' + nome + ', tudo bem?');
+
+        // interpolação com template strings
+        console.log(`Olá ${nome}, tudo bem?`);
+
+        // quebra de linhas
+        console.log(`Olá ${nome},
+        tudo bem?`);
+
+        console.log(`7 + 7 = ${7+7}`);
+
+        function calcular(x, y){
+            return x * y
+        }
+
+        console.log(`A multiplicação de 8 * 8 é: ${calcular(8,8)}`);
+    </script>
+    </head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

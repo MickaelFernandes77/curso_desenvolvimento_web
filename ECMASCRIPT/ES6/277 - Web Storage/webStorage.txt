@@ -1,0 +1,11 @@
+WEB STORAGE: 
+
+Os navegadores modernos de forma geral, implemetam recrusos de armazenamento dentro do próprio browser, depois do HTML5 os browsers de modo geral passaram a armazenar dados por outros métodos.
+
+Cookies: Os cookies por exemplo, funcionam como dados que são armazenados no lado do cliente(no browser), e sempre que existe uma request http(um acesso a uma página), os cookies são anexados nessa request de modo que o servidor consiga extrair esse cookie e analisar e trabalhar a lógica, pelos dados armazenados no lado do cliente. 
+
+Local Storage e Session Storage são muito parecidos com o Cookie, mas tem uma diferença que os dados da session e local storage não anexadas em requisições http, elas ficam no próprio browser, parecendo um banco de dados, e eles suportam mais dados. que o cookie.
+
+Só que a diferença de Session Storage para Local Storage é que a Session ao fecharmos o navegador, ela apaga os dados salvos, enquanto o Local Storage permanece os dados até que apaguemos eles manualmente. 
+
+IndexedDB, e Web SQL, são recursos mais avançados para armazenamento de dados, em aplicações front-end.

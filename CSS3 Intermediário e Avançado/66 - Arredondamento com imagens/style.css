@@ -1,0 +1,20 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+.caixa{
+    width: 400px;
+    background: #dedede url(img/topo2.png) no-repeat left top;
+}
+
+.caixa h2{
+    padding: 10px 20px 0 20px;
+    background: #dedede url(img/topo2.png) no-repeat left top;
+}
+
+.caixa .ultimo{
+    background: #dedede url(img/baixo2.png) no-repeat left bottom;
+}
+
+/* .caixa p{
+    background: #dedede url(img/baixo2.png) no-repeat left bottom;
+    padding: 10px 20px 0 20px;
+} */

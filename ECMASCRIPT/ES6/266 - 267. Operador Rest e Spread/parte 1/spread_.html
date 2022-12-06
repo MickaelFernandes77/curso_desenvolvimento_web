@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        //  o que define um operador rest e ou spread, é o contexto em que ele está sendo utilizado.
+        //spread: quando estamos espalhando estruturas de dados
+        // rest: quando estamos juntando estruturas de dados
+
+        // operador spread
+        let tituloArtigo = 'Como utilizar operador rest/spread'
+        console.log(tituloArtigo);
+        // uso do spread: espalha os dados de forma individual
+        console.log(...tituloArtigo);
+        // podemos espalhar uma cadeia de strings em arrays, tornando cada letra, um indice no array
+        console.log([...tituloArtigo]);
+        // e tambem podemos espalahr arrays.
+        let listaCursos1 = ['NodeJS', 'MongoDB', 'TypeScript', 'Multiplataforma'];
+        let listaCursos2 = ['JS', 'MySQL', 'PHP', 'HTML'];
+        // podemos espalhar dados com spread em qualquer posição do array.
+        let listaCursosCompleto = ['Web Completo', 'Android Completo', ...listaCursos1, ...listaCursos2];
+        console.log(listaCursosCompleto);
+
+        // podemos usar spread também em objetos.
+        let pessoa = {
+            nome: 'Mickael', idade: 20
+        }
+
+        let clone = {...pessoa, endereco: 'R. José Antônio dos Santos'}
+
+        console.log(clone);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

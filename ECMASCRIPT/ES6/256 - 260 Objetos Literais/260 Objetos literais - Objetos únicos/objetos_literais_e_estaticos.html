@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos literais - Objetos únicos</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        let assinatura = {
+            idCLiente: 1000,
+            descricao: 'Acesso a Internet',
+            status(){
+                console.log('Ativo');
+            } 
+        }
+
+        console.log(assinatura.descricao);
+
+        //um objeto literal é unico, mesmo que vc passe ele como valor para outras variaveis ou objetos, porém as referencias são passadas, se vc alterar algum atributo, ele ira ter alteração no objeto original também.
+        let y = assinatura
+
+        console.log(y.descricao);
+        // alteração descricao y
+
+        y.descricao = 'Internet + TV';
+        console.log(y.descricao);
+        console.log(assinatura.descricao);
+    </script>
+    </head>
+<body>
+</body>
+</html>

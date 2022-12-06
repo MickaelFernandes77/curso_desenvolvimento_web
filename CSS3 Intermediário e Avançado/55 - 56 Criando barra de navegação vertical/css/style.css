@@ -1,0 +1,29 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+ul{ margin: 0;
+    padding: 0;
+    list-style: none; 
+    text-decoration: none;}
+
+ul a{
+    text-decoration: none;
+    width: 200px;
+    height: 40px;
+    color: #000;
+    text-indent: 40px;
+    line-height: 40px;
+    /* o a(anchor) é elemento inline, então se colocar ele como block, ele assume a posição determinada pelo css, já que o inline fica do tamanho do conteúdo*/
+    display: block;
+    background: #f7b600 url(../img/menu.png) no-repeat left bottom;
+}
+
+/* selecionar automaticamente o campo do menu */
+a:hover, #home #navegacao .home a, #sobre #navegacao .sobre a, #servicos #navegacao .servicos a{
+    background-position: right bottom;
+    color: #fff;
+    background-color: #f99200;
+
+}
+
+.li{padding: 10px 20px; 
+    background: url(../img/seta.png) no-repeat left center;}

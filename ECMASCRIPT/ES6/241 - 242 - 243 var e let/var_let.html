@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let var em ES6</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        // // e aqui global, está disponível para tudo
+        // var serie = 'The Walking Dead';
+
+        // function x(){
+
+        //     var serie = 'Supernatural';
+
+        //     // a var serie, está disponivel no escopo da função
+        //     console.log('função: ' + serie);
+
+        //     // e também no escopo de bloco
+        //     if(true){
+        //         console.log('bloco da função: ' + serie);
+        //     }
+        // }
+
+        // x();
+
+        // // uso da var em escopo global
+        // if(true){
+        //         console.log('bloco da função: ' + serie);
+        //     }
+
+
+        //outro exemplo
+        // Observação: Uma variável var quando é executada em bloco, ela sofre uma elevação para escopo global
+        // Agora se a var for declarada em um escopo de bloco em uma função, ela sofre elevação, para o escopo superior, no caso o da função, ou seja não é possível acessar ela por escopo global.
+
+        // Var: sofre eleveção, quando for passada em um escopo de bloco
+        // Let: Mantem o escopo declarado, não fazendo elevaçao a outro escopo.
+        
+        // e aqui global, está disponível para tudo
+        function x(){
+            // a var serie, está disponivel no escopo da função
+            console.log('dentro da função: ' + serie2);
+
+            // e também no escopo de bloco
+            if(true){
+                console.log('bloco da função: ' + serie2);
+            }
+        }
+
+        
+
+        // uso da var em escopo global
+        if(true){
+                var serie2 = 'The Walking Dead';
+                x();
+                console.log('bloco da função: ' + serie2);
+            }
+        </script>
+    </head>
+<body>
+
+<!-- 3 escopos de variaveis: global, função e bloco -->
+
+
+
+    <div id="output"></div>
+</body>
+</html>

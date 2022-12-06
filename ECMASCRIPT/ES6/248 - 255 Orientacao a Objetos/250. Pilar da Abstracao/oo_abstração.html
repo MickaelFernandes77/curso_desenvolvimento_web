@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilar de Abstração - Exemplo</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+    
+    // a classe é um modelo que serve para geração de vários objetos se necessário
+        class ContaBancaria{
+
+            //ele faz a instância, ou seja a construção de um objeto.
+            constructor(){
+                //this: ele tem a inteligência de conectar o atributo ao objeto.
+                this.agencia = 1075;
+                this.numeroConta = 835125;
+                this.saldo = 50;
+                this.limite = 450;
+            }
+
+            //criação de função. obs: não precisamos passar a palavra function, podemos criar apenas na função
+            depositar(valorDeposito){
+                this.saldo += valorDeposito;
+            }
+
+            sacar(valorSaque){
+                this.saldo -= valorSaque;
+            }
+
+            consultarSaldo(){
+             return this.saldo;   
+            }
+        }
+
+        //criação da entidade 
+        let x = new ContaBancaria();
+        let y = new ContaBancaria();
+
+        //uso das ações na entidade
+        document.write('Saldo X: ' + x.consultarSaldo() + '<br>');
+        x.depositar(150);
+        document.write('Saldo X: ' + x.consultarSaldo() + '<br>');
+        x.sacar(50);
+        document.write('Saldo X: ' + x.consultarSaldo() + '<br>');
+        
+        //como são entidades distintas, as mudanças da X não afetam a Y
+        document.write('Saldo Y: ' + y.consultarSaldo() + '<br>');
+        
+    </script>
+    </head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

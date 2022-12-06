@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>268. Destructuring Assignment parte 1- Arrays</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        // destructring: desestruturação. Podemos desestruturar arrays e objetos.
+
+        let frutas = ['Abacaxi', 'Uvas', 'Pera', 'Mamão'];
+        
+        // uso do destructring
+        // os valores a e b, recebem os indices e 1 e 2 do array frutas.
+        // ao passarmos valores no colchetes de desetruturação, criamos variaveis novas.
+        //let [a , b, , c] = frutas;
+
+        // uso do destructring
+        // se eu quiser pular um valor, basta passar um valor vazio.
+        //let [a , b, , c] = frutas;
+
+        // uso do destructring
+        // uso de valor padrão. é usad quando não temos um valor que correponde no indice do array
+        // se por acaso eu quiser declarar um valor padrão para um valor que tem indice no array, o JS ignora o valor default, e assume o valor do indice do array
+        let [a , b, c, d, e = 'Banana'] = frutas;
+
+        console.log(a, b, c, d, e);
+
+        let coisas = [['Abacaxi', 'Uvas', 'Pera', 'Mamão'], ['José', 'Maria']]
+
+        // uso do destructring
+        // no exemplo fazemos duas desestruturações
+        let [[, , f3],[, n2]] = coisas;
+
+        console.log(f3);
+        console.log(n2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>269. Destructuring Assignment parte 2 - Objetos</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        // destructring: desestruturação. Podemos desestruturar arrays e objetos.
+
+        let produto = {
+            descricao:'Notebook',
+            preco: 1800,
+            detalhes:{
+                fabricante: 'abc',
+                modelo: 'xyz'
+            }
+        }
+
+        // uso do destructring para objeto
+        let {descricao, preco} = produto
+        console.log(descricao, preco);
+
+        // desestruturação e atribuição de valores, a variaveis
+        // desconto, recebe valor default
+        // se por acaso eu quiser declarar um valor padrão para um valor no objeto, o JS ignora o valor default, e assume o valor original do objeto
+        let {descricao:d, preco:p, desconto = 5} = produto
+        console.log(d, p, desconto);
+
+        //desestruturação, do objeto dentro do objeto
+        let {detalhes: {fabricante:f, modelo: m}} = produto;
+        console.log(f, m);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

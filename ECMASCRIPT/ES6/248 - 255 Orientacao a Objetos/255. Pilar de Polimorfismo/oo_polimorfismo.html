@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polimorfismo</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        class Animal{
+            constructor(cor, tamanho, peso){
+                this.cor = cor;
+                this.tamanho = tamanho;
+                this.peso = peso;
+            }
+
+            dormir(){
+                console.log('Dormir');
+            }
+        }
+
+        //extends: usado para extender os atributos e métodos de um objeto para outro.
+        class Passaro extends Animal{
+            constructor(cor, tamanho, peso, bico){
+                // no operador super, devemos passar os atributos que serão buscados como herança. no exemplo cor, tamanho, e peso, que veem da classe/objeto Animal
+                super(cor, tamanho, peso);
+                this.bico = bico;
+            }
+
+            voar(){
+                console.log('Voar');
+            }
+        }
+
+        //podemos tambpem extender objetos filhos como herança, incluindo tudo desse objeto filho, até mesmo heranças já realizadas.
+        class Papagaio extends Passaro{
+            constructor(sabeFalar, cor, tamanho, peso, bico){
+                super(bico, cor, tamanho, peso);
+                this.sabeFalar = sabeFalar;
+            }
+
+            falar(){
+                console.log('Falar');
+            }
+        }
+
+        class Avestruz extends Passaro{
+            constructor(cor, tamanho, peso, bico){
+                super(cor, tamanho, peso, bico);
+            }
+
+            enterrarCabeca(){
+                console.log('Enterrar Cabeça');
+            }
+
+            //sobrepondo o valor da função, que vem da classe passaro
+            voar(){
+                console.log('Não sabe Voar')
+            }
+        }
+
+        let passaro = new Passaro('Azul', 250, 300, 'Médio');
+        let avestruz = new Avestruz('Branco e Preto', 250, 15000, 'Grande');
+        //impressão das vars, que foram criadas com o uso dos objetos
+        console.log(avestruz);
+        console.log(passaro);
+
+        //chamada dos métodos da var avestruz
+        avestruz.enterrarCabeca();
+        avestruz.voar();
+        //chamada do metodo da var passaro
+        passaro.voar();
+    </script>
+    </head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

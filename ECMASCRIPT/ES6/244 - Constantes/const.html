@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Const em ES6</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        // const: é um tipo de var que não deve ser mudada ao longo do script
+        // assim como o let, consts não sofrem alteração de eleveção de escopo
+        const SERIE = 'The Walking Dead';
+
+        function x(){
+            const SERIE = 'Supernatural';
+            console.log('dentro da função: ' + SERIE);
+        }
+
+        x();
+        console.log('escopo global: ' + SERIE);
+    </script>
+    </head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

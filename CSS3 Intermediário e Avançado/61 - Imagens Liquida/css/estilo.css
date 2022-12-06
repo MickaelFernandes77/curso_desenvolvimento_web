@@ -1,0 +1,90 @@
+/* Layouts */
+
+body{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	background: #f2f2f2;
+}
+
+#container {
+	width: 85%;
+	margin: 0 auto;
+	background: #fff;
+	/* define a largura minima para o elemento, para que ele não se reduza mais do que o definido */
+	min-width: 720px;
+	/* define a largura maxima para o elemento, para que ele não cresça mais do que o definido*/
+	max-width: 1280px;
+}
+
+#marca {
+	height: 300px;
+	background: #9E9E9E url(../cabecalho.jpg) no-repeat;
+	text-align: center;
+	line-height: 300px;
+}
+
+
+
+#conteudo {
+	width: 75%;
+	float: right;
+}
+
+#conteudo-principal {
+	width: 63%;
+	float: left;
+}
+
+img.img-noticia{
+	width: 94%;
+	max-width: 600px;
+	padding: 2%;
+}
+#conteudo-secundario {
+	width: 34%;
+	float: right;
+	background: #d1d1d1;
+}
+
+#conteudo-secundario h1, 
+#conteudo-secundario h2,
+#conteudo-secundario h3,
+#conteudo-secundario p {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#navegacao {
+	width: 23%;
+	float: left;
+	padding-top: 20px;
+    padding-bottom: 20px;
+    background: #d1d1d1;
+}
+
+#navegacao ul {
+	list-style: none;
+}
+
+#navegacao li a {
+	text-decoration: none;
+}
+
+#rodape {
+	clear: both;
+	background: #c4c4c4;
+	padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

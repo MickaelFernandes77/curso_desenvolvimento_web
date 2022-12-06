@@ -1,0 +1,61 @@
+Paradigmas de programação
+
+Paradigma: é um padrão ou modelo, para o desenvolvimento.
+
+Procedural: desenvolvimento de sistemas em cadeia, que possui condições, estruturas de repetições e etc
+Estruturado 
+Imperativo
+
+Funcional
+Lógico
+
+Orientado a Objetos
+Concorrente
+Reativo
+
+------------------------------------------------------------------------------------------
+Introdução a POO
+
+Na orientação a objetos nós criamos um objeto para uma classe, um objeto é uma abstração de algo, por exemplo o objeto calcular é abstração da classe calculador, a abstração é a forma que interpretamos as coisas.
+
+O Paradigma de Orientação a objetos possuí 4 pilares:
+que são: 
+Abstração
+Encapsulamento
+Herança
+Polimorfismo
+
+------------------------------------------------------------------------------------------
+OO - Pilar da Abstração
+
+Abstração: é mais uma habilidade intuitiva, de conhecimento das coisas, do que de escrita de código. O processo de abstração tem 4 temas, que são:
+
+Entidade: Modelo, uma entidade do mundo real.
+
+Identidade: Cada entidade deve receber uma identidade, para que seja diferenciada de forma única das demais entidades, de forma independente.
+x = new carro()
+
+Características: As Características também são conhecidas como atributos.
+Em termos de Características, no momento que identificamos a entidade, precisamos ver qual as Características da entidade fazem sentido para a regra de negócio.
+Exemplo: marca, cor, modelo, qtdeDePortas
+
+Ações: Ações também são conhecidas como métodos. As ações são os comportamentos que devem ser aplicados no contexto da regra de negócio da aplicação.
+Exemplo: ligar, acelerar, freiar, desligar.
+------------------------------------------------------------------------------------------
+OO - Pilar de Encapsulamento
+
+O encapsulamento tem dois lados, o lado conceitual, consiste em a=encapsular um objeto afim de torná-lo seguro. Para que possamos dizer o que dentro do encapsulamento está disponível para uso no sistema.
+
+Se o objeto for privado, ele só poderá ser acessado pelo próprio objeto, o que cria uma camada de segurança.
+
+O funcionamento de herança ocorre na etapa de encapsulamento.
+Mas ainda não é suportado no es6 2015, a parte de encapsulamento(public, private).
+------------------------------------------------------------------------------------------
+OO - Princípio de Herança
+
+A herança trás vantagens de reutilização de código(menos redundância) e manutenção no código. Onde os objetos filhos herdam, atributos e métodos do objeto pai.
+------------------------------------------------------------------------------------------
+OO - Polimorfismo
+
+Na herança os objetos filho não tem que necessarimanete se comportar da mesma forma que o objeto pai, onde o objeto filho podemos ter variações de atributos e métodos, que não existem no elemento pai efetivamente.
+

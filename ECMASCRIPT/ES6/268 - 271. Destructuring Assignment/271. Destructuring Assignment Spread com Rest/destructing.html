@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>271. Destructuring Assignment Spread com Rest</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        // destructring: desestruturação. Podemos desestruturar arrays e objetos.
+        let arr = [10, 20, 30, 40];
+
+        // uso do rest, junto ao spread
+        let [a, ...resto] = arr;
+
+        console.log(a);
+        console.log(resto);
+
+        let obj = {
+            a: 10, b:20, c:30, d:40
+        }
+
+        let {a: A, ...restante} = obj;
+        console.log(A);
+        console.log(restante);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

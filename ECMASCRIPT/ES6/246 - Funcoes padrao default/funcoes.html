@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções Padrão Default</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        // pode se definir um valor default para os parametros, para caso não seja passado o valor do parametro.
+        function contarUmaHistoria(personagem = '', personagem2 = ''){
+            document.write(`Era uma vez uma pessoa que se chama ${personagem}, e uma outra pessoa que se chama ${personagem2}, e eles são amigos.`)
+        }
+
+        contarUmaHistoria('Mickael', 'Maria')
+    </script>
+    </head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

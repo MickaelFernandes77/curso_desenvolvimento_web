@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        //  o que define um operador rest e ou spread, é o contexto em que ele está sendo utilizado.
+        //spread: quando estamos espalhando estruturas de dados
+        // rest: quando estamos juntando estruturas de dados
+
+        // uso do rest
+        // ...param: recebe todos os valores e unifica os parametros em formato de array.
+        function soma(...param) {
+            let resultado = 0;
+
+            console.log(param);
+
+            param.forEach(v => resultado += v);
+
+            return resultado;
+        }
+
+        console.log(soma(3, 8, 7, 5));
+
+        function multiplicacao(m, ...p) {
+            let resultado = 0;
+            console.log(m);
+            console.log(p);
+
+            p.forEach(v => resultado += m * v);
+            return resultado;
+        }
+
+        console.log(multiplicacao(5, 7, 20, 19, 15));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
