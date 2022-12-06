@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+
+    <title>Bootstrap - Tabelas e Paginação</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+</head>
+
+<body style="margin-bottom: 200px;padding: 16px;">
+
+
+    <!-- table: formata como tabela
+    table-dark: altera a cor da tabela para dark. dá pra aplicar outras cores
+    thead-dark: altera o cabeçalho da tabela para dark. dá pra aplicar outras cores
+    table-striped: deixa as linhas da tabela listradas. 
+    table-bordered: deixa a tabela com todas as linhas.
+    table-borderless: deixa a tabela sem linha. -->
+    <h2>Tabelas: table</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Produto</th>
+                <th>Marca</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>00001</td>
+                <td>Iphone X</td>
+                <td>Apple</td>
+                <td>R$ 6.999</td>
+            </tr>
+            <tr>
+                <td>00002</td>
+                <td>Nexus 5</td>
+                <td>LG</td>
+                <td>R$ 999</td>
+            </tr>
+            <tr>
+                <td>00003</td>
+                <td>Notebook VAIO</td>
+                <td>Sony</td>
+                <td>R$ 1.999</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <h2>Tabela escura: table-dark</h2>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Produto</th>
+                <th>Marca</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>00001</td>
+                <td>Iphone X</td>
+                <td>Apple</td>
+                <td>R$ 6.999</td>
+            </tr>
+            <tr>
+                <td>00002</td>
+                <td>Nexus 5</td>
+                <td>LG</td>
+                <td>R$ 999</td>
+            </tr>
+            <tr>
+                <td>00003</td>
+                <td>Notebook VAIO</td>
+                <td>Sony</td>
+                <td>R$ 1.999</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+
+    <h2>Tabela com cabeçalho escuro: thead-dark</h2>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>#</th>
+                <th>Produto</th>
+                <th>Marca</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>00001</td>
+                <td>Iphone X</td>
+                <td>Apple</td>
+                <td>R$ 6.999</td>
+            </tr>
+            <tr>
+                <td>00002</td>
+                <td>Nexus 5</td>
+                <td>LG</td>
+                <td>R$ 999</td>
+            </tr>
+            <tr>
+                <td>00003</td>
+                <td>Notebook VAIO</td>
+                <td>Sony</td>
+                <td>R$ 1.999</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <h2>Tabela com formatações: table-striped, table-bordered, table-borderless</h2>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>#</th>
+                <th>Produto</th>
+                <th>Marca</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>00001</td>
+                <td>Iphone X</td>
+                <td>Apple</td>
+                <td>R$ 6.999</td>
+            </tr>
+            <tr>
+                <td>00002</td>
+                <td>Nexus 5</td>
+                <td>LG</td>
+                <td>R$ 999</td>
+            </tr>
+            <tr>
+                <td>00003</td>
+                <td>Notebook VAIO</td>
+                <td>Sony</td>
+                <td>R$ 1.999</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>#</th>
+                <th>Produto</th>
+                <th>Marca</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>00001</td>
+                <td>Iphone X</td>
+                <td>Apple</td>
+                <td>R$ 6.999</td>
+            </tr>
+            <tr>
+                <td>00002</td>
+                <td>Nexus 5</td>
+                <td>LG</td>
+                <td>R$ 999</td>
+            </tr>
+            <tr>
+                <td>00003</td>
+                <td>Notebook VAIO</td>
+                <td>Sony</td>
+                <td>R$ 1.999</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+
+    <table class="table table-borderless">
+        <thead class="thead-dark">
+            <tr>
+                <th>#</th>
+                <th>Produto</th>
+                <th>Marca</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>00001</td>
+                <td>Iphone X</td>
+                <td>Apple</td>
+                <td>R$ 6.999</td>
+            </tr>
+            <tr>
+                <td>00002</td>
+                <td>Nexus 5</td>
+                <td>LG</td>
+                <td>R$ 999</td>
+            </tr>
+            <tr>
+                <td>00003</td>
+                <td>Notebook VAIO</td>
+                <td>Sony</td>
+                <td>R$ 1.999</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <h2>Classes contextuais: table-success, table-danger, table...</h2>
+    <table class="table table-success">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Produto</th>
+                <th>Marca</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>00001</td>
+                <td>Iphone X</td>
+                <td>Apple</td>
+                <td>R$ 6.999</td>
+            </tr>
+            <tr>
+                <td>00002</td>
+                <td>Nexus 5</td>
+                <td>LG</td>
+                <td>R$ 999</td>
+            </tr>
+            <tr>
+                <td>00003</td>
+                <td>Notebook VAIO</td>
+                <td>Sony</td>
+                <td>R$ 1.999</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-danger">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Produto</th>
+                <th>Marca</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>00001</td>
+                <td>Iphone X</td>
+                <td>Apple</td>
+                <td>R$ 6.999</td>
+            </tr>
+            <tr>
+                <td>00002</td>
+                <td>Nexus 5</td>
+                <td>LG</td>
+                <td>R$ 999</td>
+            </tr>
+            <tr>
+                <td>00003</td>
+                <td>Notebook VAIO</td>
+                <td>Sony</td>
+                <td>R$ 1.999</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <table class="table table-warning">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Produto</th>
+                <th>Marca</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>00001</td>
+                <td>Iphone X</td>
+                <td>Apple</td>
+                <td>R$ 6.999</td>
+            </tr>
+            <tr>
+                <td>00002</td>
+                <td>Nexus 5</td>
+                <td>LG</td>
+                <td>R$ 999</td>
+            </tr>
+            <tr>
+                <td>00003</td>
+                <td>Notebook VAIO</td>
+                <td>Sony</td>
+                <td>R$ 1.999</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <table class="table table-info">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Produto</th>
+                <th>Marca</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>00001</td>
+                <td>Iphone X</td>
+                <td>Apple</td>
+                <td>R$ 6.999</td>
+            </tr>
+            <tr>
+                <td>00002</td>
+                <td>Nexus 5</td>
+                <td>LG</td>
+                <td>R$ 999</td>
+            </tr>
+            <tr>
+                <td>00003</td>
+                <td>Notebook VAIO</td>
+                <td>Sony</td>
+                <td>R$ 1.999</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <h2>Tabela pequena: table-sm</h2>
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Produto</th>
+                <th>Marca</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>00001</td>
+                <td>Iphone X</td>
+                <td>Apple</td>
+                <td>R$ 6.999</td>
+            </tr>
+            <tr>
+                <td>00002</td>
+                <td>Nexus 5</td>
+                <td>LG</td>
+                <td>R$ 999</td>
+            </tr>
+            <tr>
+                <td>00003</td>
+                <td>Notebook VAIO</td>
+                <td>Sony</td>
+                <td>R$ 1.999</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <h2>Tabela responsiva: table-responsive</h2>
+    <div class="table-responsive">
+        <table class=" table table-dark ">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Produto</th>
+                    <th>Marca</th>
+                    <th>Preço</th>
+                    <th>Descrição</th>
+                    <th>Ativo</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>00001</td>
+                    <td>Iphone X</td>
+                    <td>Apple</td>
+                    <td>R$ 6.999</td>
+                    <td>Lorem ipsum dolor sit amet.
+                    </td>
+                    <td>S</td>
+                </tr>
+                <tr>
+                    <td>00002</td>
+                    <td>Nexus 5</td>
+                    <td>LG</td>
+                    <td>R$ 999</td>
+                    <td>Lorem ipsum dolor sit amet.
+                    </td>
+                    <td>S</td>
+                </tr>
+                <tr>
+                    <td>00003</td>
+                    <td>Notebook VAIO</td>
+                    <td>Sony</td>
+                    <td>R$ 1.999</td>
+                    <td>Lorem ipsum dolor sit amet.
+                    </td>
+                    <td>S</td>
+                </tr>
+            </tbody>
+
+        </table>
+        <nav>
+            <ul class="pagination">
+                <li class="page-item disabled">
+                    <a href=" " class="page-link ">Anterior</a>
+                </li>
+                <li class="page-item active ">
+                    <a href=" " class="page-link ">1</a>
+                </li>
+                <li>
+                    <a href=" " class="page-link ">2</a>
+                </li>
+                <li class="page-item "><a href=" " class="page-link ">Próximo</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <h2>Paginação: pagination, page-item, page-link - active, disabled</h2>
+    <nav>
+        <ul class="pagination">
+            <li class="page-item disabled">
+                <a href=" " class="page-link ">Anterior</a>
+            </li>
+            <li class="page-item active ">
+                <a href=" " class="page-link ">1</a>
+            </li>
+            <li>
+                <a href=" " class="page-link ">2</a>
+            </li>
+            <li class="page-item "><a href=" " class="page-link ">Próximo</a>
+            </li>
+        </ul>
+    </nav>
+
+    <h2>Alinhamento: justify-content-ALINHAMENTO(center, end) </h2>
+    <nav>
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a href=" " class="page-link ">Anterior</a>
+            </li>
+            <li class="page-item active ">
+                <a href=" " class="page-link ">1</a>
+            </li>
+            <li>
+                <a href=" " class="page-link ">2</a>
+            </li>
+            <li class="page-item "><a href=" " class="page-link ">Próximo</a>
+            </li>
+        </ul>
+    </nav>
+
+    <nav>
+        <ul class="pagination justify-content-end">
+            <li class="page-item disabled">
+                <a href=" " class="page-link ">Anterior</a>
+            </li>
+            <li class="page-item active ">
+                <a href=" " class="page-link ">1</a>
+            </li>
+            <li>
+                <a href=" " class="page-link ">2</a>
+            </li>
+            <li class="page-item "><a href=" " class="page-link ">Próximo</a>
+            </li>
+        </ul>
+    </nav>
+
+    <h2>Tamanho: pagination-TAMANHO(sm, lg) </h2>
+    <nav>
+        <ul class="pagination pagination-sm justify-content-center">
+            <li class="page-item disabled">
+                <a href=" " class="page-link ">Anterior</a>
+            </li>
+            <li class="page-item active ">
+                <a href=" " class="page-link ">1</a>
+            </li>
+            <li>
+                <a href=" " class="page-link ">2</a>
+            </li>
+            <li class="page-item "><a href=" " class="page-link ">Próximo</a>
+            </li>
+        </ul>
+    </nav>
+    <nav>
+        <ul class="pagination pagination-lg justify-content-center">
+            <li class="page-item disabled">
+                <a href=" " class="page-link ">Anterior</a>
+            </li>
+            <li class="page-item active ">
+                <a href=" " class="page-link ">1</a>
+            </li>
+            <li>
+                <a href=" " class="page-link ">2</a>
+            </li>
+            <li class="page-item "><a href=" " class="page-link ">Próximo</a>
+            </li>
+        </ul>
+    </nav>
+
+    <h2>Setas </h2>
+    <nav>
+        <ul class="pagination pagination-lg justify-content-center">
+            <li class="page-item">
+                <a href="" class="page-link">
+                    <span>&laquo;</span>
+                    <!-- sr-only: exibe a tag para as ferramentar de leituras para deficientes visuais -->
+                    <span class="sr-only">Anterior</span>
+                </a>
+            </li>
+            <li class="page-item ">
+                <a href=" " class="page-link ">1</a>
+            </li>
+            <li>
+                <a href=" " class="page-link ">2</a>
+            </li>
+            <li class="page-item ">
+                <a href=" " class="page-link ">
+                    <span>&raquo;</span>
+                    <span class="sr-only">Próximo</span></a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>
+
+</body>
+
+</html>

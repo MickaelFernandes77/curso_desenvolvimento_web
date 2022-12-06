@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+
+    <title>Bootstrap - Configurações do Grid</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- icones font-awesome -->
+    <script src="https://kit.fontawesome.com/82c40dad7d.js" crossorigin="anonymous"></script>
+
+    <style>
+        .marcador {
+            background: #fe9d9d;
+            border: solid 1px#36ae26;
+        }
+        
+        .marcador-container {
+            background: #5bf946;
+            border: solid 1px#36ae26;
+        }
+    </style>
+</head>
+
+<!--container: elemento pai, cada container tem até 12 de tamanho de coluna.
+    container-fluid: preencge toda a area de conteudo
+    row: cria uma linha no grid. E é na row que configuaramos o sistema de 12 colunas do grid
+    
+    col: coloca um tamanho fixo para uma row, fica sempre uma ao lado da outra
+    col-num: podemos colocar numero para ocupar o espaçamento da coluna. sintaxe: col-1, col-2, col-3, col-4, col-6, até col-12 
+    col-sm-numero: espaço que a coluna vai ocupar nos devices pequenos
+    col-md-numero: espaço que a coluna vai ocupar nos devices medios
+    col-lg-numero: espaço que a coluna vai ocupar nos devices grandes
+    col-xl-numero: espaço que a coluna vai ocupar nos devices extra grandes
+
+    Observação: conseguimos também adicionar mais que um tamanho de coluna para os diferentes tipos de telas, nas tags. ex: col-sm-2, col-md-10. 
+
+    order-num: podemos exibir qual a ordem da exibição das colunas. sintaxe: order-1, order-3, order-2 e por ai vai.
+    offset-num: offset aplica espaçamento na coluna com base no seu tamanho. Por exemplo se a coluna ptem tamanho 6, podemos aplicar offset até 6 nela. sintaxe: ofsset-1, offset-2 e por ai vai.
+    Também podemos colocar offset para tamanhos especificos de telas, offset-md-1, offset-lg-1, offset-xl-1 e etc.-->
+
+<body>
+
+    <div class="container-fluid marcador-container">
+        <h2>Largura Fixa</h2>
+        <div class="row">
+            <div class="marcador col">Área 1</div>
+            <div class="marcador col">Área 2</div>
+            <div class="marcador col">Área 3</div>
+            <div class="marcador col">Área 4</div>
+        </div>
+
+
+
+
+        <h2>Largura Automática(auto-layout)</h2>
+        <div class="row" style="border:solid 1px red">
+            <!-- para definir uma largura automatica, basta definir o tipo e a numeração. Porem a desvantagem é que em todos os tipos de telas as colunas sempre terão o mesmo tamanho. -->
+            <div class="marcador col">Área 1</div>
+            <div class="marcador col-4">Área 2</div>
+            <div class="marcador col-6">Área 3</div>
+        </div>
+        <h2>Largura Igual Empilhada</h2>
+        <div class="row">
+            <!-- para empilhar as colunas basta passarmos a col e o seu tamanho para o dispositvo. Ex: col-sm, col-md, col-lg, col-xl -->
+            <div class="marcador col-md">Área 1</div>
+            <div class="marcador col-md">Área 2</div>
+            <div class="marcador col-md">Área 3</div>
+        </div>
+
+        <h2>Ordenado</h2>
+        <div class="row">
+            <!-- Para ordenar a ordem da exibião das colunas basta passarmos o order. -->
+            <div class="marcador col-md-4 order-2">Área 1</div>
+            <div class="marcador col-md-4 order-3">Área 2</div>
+            <div class="marcador col-md-4 order-1">Área 3</div>
+        </div>
+        <h2>Offset</h2>
+        <div class="row">
+            <!-- Offset: offset aplica espaçamento na coluna com base no seu tamanho. Por exemplo se a coluna tem tamanho 6, podemos aplicar offset até 6 nela. -->
+            <div class="marcador col-md-6 offset-3">Login...</div>
+        </div>
+        <h2>Offset Multiplos alinhamentos</h2>
+        <div class="row">
+            <div class="col-md-6" style="border:solid 1px blue">col-md-6
+                <div class="row">
+                    <div class="marcador col-md-6">Conteudo 1</div>
+                    <div class="marcador col-md-6">Conteudo 2</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>
+
+</body>
+
+</html>
