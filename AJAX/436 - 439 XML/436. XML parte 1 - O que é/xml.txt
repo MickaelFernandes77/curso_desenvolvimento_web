@@ -1,0 +1,9 @@
+XML
+
+XML siginifica extensible markup language, que assim como o html, é uma linguagem de marcação.
+
+essa linguagem serve para estruturar e descrever informações, ele serve para troca de informações entre qualquer tipo de sistema.
+
+Onde ele estabelece um padrão de comunicação, para que a comunicação siga uma regra, para troca de dados e informações.
+
+Mas atualmente, o XML está caindo em desuso, e o JSON está sendo mais utilizado.

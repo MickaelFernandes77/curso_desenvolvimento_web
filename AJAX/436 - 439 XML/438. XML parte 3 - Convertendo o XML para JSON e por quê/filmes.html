@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Filmes</title>
+    <!-- bootstrap - link cdn -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="xmltojson.js"></script>
+    <script>
+        function getFilmes(){
+            let xmlHttp = new XMLHttpRequest();
+            // estabeleecendo conexão com servidor, abrindo o arquivo xml
+            xmlHttp.open('GET', 'filmes.xml');
+            // função que monitora as mudanças de estado
+            xmlHttp.onreadystatechange = () => {
+                if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
+                    let xmlFilmes = xmlHttp.responseText; 
+
+                    let parser = new DOMParser()
+                    // esse metodo espera 2 parametros, o 1 parametro é o texto que desejamos fazer o parse, e o 2 parametro é a notação utilizada para a conversão.
+                    domFilmes = parser.parseFromString(xmlFilmes, 'text/xml')
+
+                    console.log(domFilmes);
+                    // conversão de xml para json, usando a função do arquivo exportado.
+                    jsonFilmes = xmlToJson(domFilmes);
+
+                }
+
+                if(xmlHttp.readyState == 4 && xmlHttp.status == 404){
+                    alert('não encontrado')
+                }
+            }
+
+            // enviando a request
+            xmlHttp.send();
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light mb-4">
+        <div class="container">
+            <div class="navbar-brand mb-0 h1">
+                Catálogo de Filmes
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-dark" onclick="getFilmes()">Listar Filmes</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>

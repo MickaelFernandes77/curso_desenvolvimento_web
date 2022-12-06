@@ -1,0 +1,9 @@
+Requisicições Sincronas e Assíncronas
+
+As aplicações WEB estão inseridas em um ambiente cliente/servidor. Ou seja estamos trabalhando com requisições de páginas dinamicas, que são entregues de um servidor para o cliente.
+Os métodos Sincronos e Assíncronos, definem o comportamento dessas requisições e suas resposta. 
+
+No método Sincrono, quando efetuamos uma requisição, o browser responsável pela requisição, ficará aguardando até que o servidor envie uma resposta, cada requisição deve ser finalizada, para que uma nova requisição seja feita, para o servidor.
+
+No método Assíncronos, quando efetuamos uma requisição, o browser responsável pela requisição, pode disparar mais que uma requisição sem que haja sincronismo entre as requisições,  e essas requisições serão tratadas de forma paralela, sendo que a resposta de cada requisição será capturada pelo browser, e ser encaminhada para o servidor. 
+

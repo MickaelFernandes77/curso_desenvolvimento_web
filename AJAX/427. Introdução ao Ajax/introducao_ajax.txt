@@ -1,0 +1,15 @@
+AJAX
+
+AJAX significa Asynchronus Javascript and XML
+
+Uma metodologia que de orogramação que utiliza o JS para fazer a comunicação entre o front-end e o back-end de aploicações web. Antes essa comunicação era feita por XML.
+Mas atualmente a comunicação é feita por JSON,poruqe o JSON é mais leve, e é suportado nativamente pelo JS.
+
+XML e JSON são formas de escrita, para fazer uma comunicação, entre fornt-end e back-end.
+
+Diferença entre implementação tradiconal X AJAX:
+
+tradicional: No modelo tradiconal temos o front-end(client) e o Back-end(regras de negocio e banco de dados) e a internet entre esses 2. 
+Ao trabalhar no modelo tradicional, o browser faz uma requisição para o servidor, e durante o processo de requisição o borwser fica travado, pois está aguardando uma resposta, e após o servidor receber a requisição fazer as tratativas, e conceder uma resposta, o navegador dá sequencia ao processamento, liberando a página para o usuário.
+
+AJAX: o AJAX trata isso de forma mais inteligente, a própria aplicação através de um evento no front end, realiza uma requisição para o servidor, e isso é feito através de um objeto chamado XMLHTTPREQUEST, e esse objeto gerencia todo o processo de envio da requisição e captura da resposta, e quando a resposta estiver pronta podemos manipular essa resposta e exibir a resposta para o usuário final, o que torna a aplicação mais amigável. 

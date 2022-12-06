@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Requisições Assíncronas</title>
+		
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        
+        <script>
+
+            function requisitarPagina(url){
+                let ajax = new XMLHttpRequest();
+
+                // open: ele abre uma determinada pagina, com o método HTTP e sua url como parametro
+                ajax.open('GET', url);
+                // para enviar uma request, usamos send().
+                ajax.send();
+
+                console.log(ajax);
+
+                // STATE: Estados da requisição: 
+                //0: request not initialized( requisição nao realizada)
+                // 1: server connection established(conexão com o servidor estabelecida)
+                // 2: request received (requisição recebida) -> recebida pelo servidor, quando um servidor ecebe um request
+                // 3: processing request (processando requisição) -> o servidor processa a requisição, depois do processsamento ele envia para o client a resposta e temos o estado 4.
+                // 4: request finished and response is ready (requisição finalizada)  -> pós a respota ser enviada para o client, podendo manipular essa reposta e podemos exibir ele para o client.
+        }
+        </script>
+	</head>
+
+	<body>
+
+		<!-- Static navbar -->
+	    <nav class="navbar navbar-light bg-light mb-4">
+	      <div class="container">
+	        <div class="navbar-brand mb-0 h1">
+	        	<h3>Requisições síncronas e assíncronas</h3>
+	        </div>
+	      </div>
+	    </nav>
+
+
+	    <div class="container">
+
+	    	<div class="row mb-2">
+	    		<div class="col-md-4 center"></div>
+	    		<div class="col-md-4 center">
+	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_1_conteudo.html')">Página 1</a>
+	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_2_conteudo.html')">Página 2</a>
+	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_3_conteudo.html')">Página 3</a>
+	    		</div>
+	    		<div class="col-md-4 center"></div>
+	    	</div>
+	    	
+	    	<div class="row">
+		    	<div class="col-md-1"></div>
+				<div class="col-md-1"></div>
+			</div>
+
+		</div>	
+	</body>
+</html>
