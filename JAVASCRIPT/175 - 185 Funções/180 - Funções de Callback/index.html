@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Funções - Funções de CallBack</title>
+    <script>
+
+
+
+        // função de callback: são funções, que são encaminhadas como parâmetros para outras funções.
+        // o objetivo é que após a finalização da função, ter condições de chamar a função que foi encaminhada como parametro(que seria a func de callback)
+        function exibirArtigo(id, callbackSucesso, callbackErro) {
+            // logica: imagine que executamos uma lógica que recupera o id do artigo via requisição http.
+            if (false) {
+                // se a lógica tiver sucesso, chama a função de callback de sucesso
+                // uso da função de callbackSucesso, que recebe o titulo e a descricao
+                callbackSucesso('Funções de callback em JS', 'Funções de Callback são muito utilizadas')
+            } else {
+                // se a lógica tiver erro, chama a função de callback de erro
+                // usa da função de callbackErro, que recebe a mensagem de erro.
+                callbackErro('Erro ao recuperar os dados')
+            }
+        }
+
+        var callbackSucesso = function (titulo, descricao) {
+            document.write('<h1>' + titulo + '<h1> <br>');
+            document.write('<p>' + descricao + '<p>');
+        }
+
+        var callbackErro = function (erro) {
+            document.write('<p> Erro: ' + erro + '</p>');
+        }
+
+
+        // estamos encaminhando a referência da função, por meio das variáveis.
+        // e não estamos usando (). pois se usassemos, chamariamos a função imediatamente,
+        exibirArtigo(1, callbackSucesso, callbackErro);
+
+        document.write('<hr>');
+
+
+        //Explicação sobre callback function: O QUE CARACTERIZA CALLBACK, É PASSAR UMA FUNÇÃO COMO PARAMETRO PARA OUTRA FUNÇÃO, E USAR ESSA FUNÇÃO PASSADA NO CÓDIGO DA FUNÇÃO QUE A RECEBE. AS FUNÇÕES DE CALLBACK SÃO USADAS PARA COMPLETAR UMA AÇÃO.
+
+        // BASICAMENTE UTILIZAMOS A FUNÇÃO DE CALLBACK 2 VEZES: UMA VEZ NO CÓDIGO DA FUNÇÃO QUE VAI RECEBER A FUNC DE CALLBACK. E A SEGUNDA VEZ QUANDO PASSAMOS A FUNÇÃO DE CALLBACK COMO PARAMETRO, AO CHAMAR A FUNÇÃO QUE RECEBEU A FUNC DE CALLBACK NO SEU BLOCO DE CÓDIGO.
+
+        // função de callback
+        // essa função vai receber o resultado da operação matemática que será realizada.
+        function exibir(num) {
+            document.write('O resultado da operação é: ' + num);
+        }
+
+        // função de soma
+        function soma(a, b, callback) {
+            let op = a + b;
+            // uso da func de callback: passando o valor da operação matematica, para o parametro da função de callback. 
+            callback(op);
+        }
+        // função de mult
+        function multiplicar(a, b, cb) {
+            let op = a * b;
+            // uso da func de callback: passando o valor da operação matematica, para o parametro da função de callback.
+            cb(op);
+        }
+
+        // uso da função soma
+        // passando a função de callback exibir como parametro.
+        soma(2, 2, exibir);
+
+        document.write('<br>');
+
+        // uso da função multiplicar
+        // passando a função de callback exibir como parametro.
+        multiplicar(2, 4, exibir);
+
+        // outro exemplo de função de callback sincrona
+
+        // func de callback
+        function greeting(name) {
+            alert('Olá ' + name);
+        }
+
+        // func padrao
+        function processUserInput(callback) {
+            var name = prompt('Por favor insira seu nome.');
+            callback(name);
+        }
+
+        // uso da func padrao, recebendo como parametro a função de calback.
+        processUserInput(greeting);
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
