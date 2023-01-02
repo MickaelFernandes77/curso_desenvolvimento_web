@@ -24,7 +24,8 @@
                 // para enviar uma request, usamos send().
                 ajax.send();
 
-                // logica que olha o progresso da requisicao
+                // logica que olha o progresso da requisicao.
+				// onreadystatechange: é executado sempre que o estado da requisição é modificado. E geralmente ela recebe uma função para fornecer a resposta.
                 ajax.onreadystatechange = function(){
                     console.log(ajax.readyState)
                 };

@@ -1,0 +1,9 @@
+Os status de resposta de uma requisição, podem ser consultados em: https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
+
+Nos temos os status de respostas divididos em 5 categorias:
+
+100 a 199: são respostas informativas
+200 a 299: são respostas de sucesso
+300 a 399: são respostas de redirecionamento(mensagens de redirecionamento)
+400 a 499: são respostas de erros no cliente
+500 a 599: são respostas de de erros no servidor

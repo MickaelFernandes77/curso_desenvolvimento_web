@@ -1,7 +1,7 @@
 STATE: Estados da requisição: 
 0: request not initialized( requisição nao realizada)
 1: server connection established(conexão com o servidor estabelecida)
-2: request received (requisição recebida) -> recebida pelo servidor, quando um servidor ecebe um request
+2: request received (requisição recebida) -> recebida pelo servidor, quando um servidor recebe um request
 3: processing request (processando requisição) -> o servidor processa a requisição, depois do processsamento ele envia para o client a resposta e temos o estado 4.
 4: request finished and response is ready (requisição finalizada)  -> pós a respota ser enviada para o client, podendo manipular essa reposta e podemos exibir ele para o client.
         
